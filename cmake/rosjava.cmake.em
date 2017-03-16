@@ -2,7 +2,7 @@
 # Utilities
 ##############################################################################
 
-set(CATKIN_GLOBAL_MAVEN_DESTINATION ${CATKIN_GLOBAL_SHARE_DESTINATION}/maven CACHE PATH "path to which maven artifacts are deployed in your workspace")
+set(CATKIN_GLOBAL_MAVEN_DESTINATION ${CATKIN_GLOBAL_SHARE_DESTINATION}/repository CACHE PATH "path to which maven artifacts are deployed in your workspace") #TODO: make path configurable!
 set(CATKIN_GLOBAL_GRADLE_DESTINATION ${CATKIN_GLOBAL_SHARE_DESTINATION}/gradle CACHE PATH "path to which gradle configuration and artifacts are deployed in your workspace")
 
 # Scans down directories till it finds the gradle wrapper.

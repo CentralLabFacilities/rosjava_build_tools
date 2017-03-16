@@ -44,10 +44,10 @@ if __name__ == '__main__':
     if args.maven_deployment_repository:
         repo = get_environment_variable(environment_variables, 'ROS_MAVEN_DEPLOYMENT_REPOSITORY')
         if repo is None:
-            repo = os.path.join(workspaces[0], 'share', 'maven')
+            repo = os.path.join(workspaces[0], 'share', 'repository') #TODO: make configurable!
         else:
-            if repo in [os.path.join(w, 'share', 'maven') for w in workspaces]:
-                repo = os.path.join(workspaces[0], 'share', 'maven')
+            if repo in [os.path.join(w, 'share', 'repository') for w in workspaces]: #TODO: make configurable!
+                repo = os.path.join(workspaces[0], 'share', 'repository') #TODO: make configurable!
         print(repo)
     elif args.maven_repository:
         repo = get_environment_variable(environment_variables, 'ROS_MAVEN_REPOSITORY')
@@ -55,7 +55,7 @@ if __name__ == '__main__':
             repo = 'https://github.com/rosjava/rosjava_mvn_repo/raw/master'
         print(repo)
     elif args.maven_path:
-        new_maven_paths = [os.path.join(path, 'share', 'maven') for path in workspaces]
+        new_maven_paths = [os.path.join(path, 'share', 'repository') for path in workspaces] #TODO: make configurable!
         maven_paths = get_environment_variable(environment_variables, 'ROS_MAVEN_PATH')
         if maven_paths is None:
             maven_paths = new_maven_paths
