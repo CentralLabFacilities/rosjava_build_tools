@@ -64,8 +64,8 @@ def index_message_package_dependencies_from_local_environment(package_name_list=
     # The following returns: A list of tuples containing the relative path and a ``Package`` object,
     sorted_package_tuples = catkin_pkg.topological_order.topological_order_packages(
                                 packages=dict(message_packages.values()),
-                                whitelisted=None,
-                                blacklisted=None,
+                                whitelisted=message_package_whitelist,
+                                blacklisted=message_package_blacklist,
                                 underlay_packages=dict(all_packages.values()))
     # print("%s" % [p.name for (unused_relative_path, p) in sorted_package_tuples])
     return sorted_package_tuples
