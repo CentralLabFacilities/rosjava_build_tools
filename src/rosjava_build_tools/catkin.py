@@ -14,7 +14,7 @@ import catkin_pkg.topological_order
 
 # packages that don't properly identify themselves as message packages (fix upstream).
 message_package_whitelist = ['map_store']
-message_package_blacklist = []
+message_package_blacklist = ['pcl_ros']
 
 ##############################################################################
 # Methods
