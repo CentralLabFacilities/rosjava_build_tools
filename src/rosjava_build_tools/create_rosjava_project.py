@@ -175,8 +175,8 @@ def add_tasks_to_cmake_setup(tasks):
         gradle_tasks = set([])
         if rosjava_setup_string.find("publish") == -1:
             gradle_tasks.add("publish")
-        if rosjava_setup_string.find("installApp") == -1:
-            gradle_tasks.add("installApp")
+        if rosjava_setup_string.find("install") == -1:
+            gradle_tasks.add("install")
         gradle_tasks |= set(tasks)
         console.pretty_print('  File      : ', console.cyan)
         console.pretty_println('CMakeLists.txt (gradle task update)', console.yellow)
