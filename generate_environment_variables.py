@@ -23,7 +23,7 @@ def get_workspaces(environ):
     env_name = 'CMAKE_PREFIX_PATH'
     value = environ[env_name] if env_name in environ else ''
     paths = [path for path in value.split(os.pathsep) if path]
-    # remove non-workspace paths
+    # dont remove non-workspace paths
     workspaces = [path.replace(' ', '\ ') for path in paths]
     return workspaces
 
