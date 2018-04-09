@@ -52,7 +52,7 @@ if __name__ == '__main__':
     elif args.maven_repository:
         repo = get_environment_variable(environment_variables, 'ROS_MAVEN_REPOSITORY')
         if repo is None:
-            repo = 'https://github.com/rosjava/rosjava_mvn_repo/raw/master'
+            repo = 'https://mvn.cit-ec.de/nexus/content/repositories/releases/'
         print(repo)
     elif args.maven_path:
         new_maven_paths = [os.path.join(path, 'share', 'repository') for path in workspaces] #TODO: make configurable!
