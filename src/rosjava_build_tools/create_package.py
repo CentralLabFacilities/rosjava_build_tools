@@ -100,7 +100,7 @@ def populate_repo(repo_path, package_type):
 
 
 def create_gradle_wrapper(repo_path):
-    gradle_binary = os.path.join(os.path.dirname(__file__), 'gradle', 'gradlew')
+    gradle_binary = os.path.join(os.path.dirname(__file__),'..', '..', '..', 'share', 'rosjava_build_tools', 'gradle', 'gradlew')
     cmd = [gradle_binary, '-p', repo_path, 'wrapper']
     console.pretty_print("Creating gradle wrapper: ", console.cyan)
     console.pretty_println("%s" % ' '.join(cmd), console.yellow)
