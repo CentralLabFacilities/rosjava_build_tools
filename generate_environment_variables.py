@@ -142,6 +142,6 @@ if __name__ == '__main__':
                 home = os.path.join(workspaces[0], 'share', 'maven')
         print(home)
     elif args.create_maven_settings:
-        print(MAVEN_HEADER + get_repositories_xml() + MAVEN_FOOTER)
+        print((MAVEN_HEADER + get_repositories_xml() + MAVEN_FOOTER).encode('string_escape'))
     else:
         print("Nothing to see here - please provide one of the valid command switches.")
