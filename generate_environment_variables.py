@@ -2,6 +2,7 @@
 
 import os
 import argparse
+import codecs
 
 CATKIN_MARKER_FILE = '.catkin'
 
@@ -142,6 +143,7 @@ if __name__ == '__main__':
                 home = os.path.join(workspaces[0], 'share', 'maven')
         print(home)
     elif args.create_maven_settings:
-        print((MAVEN_HEADER + get_repositories_xml() + MAVEN_FOOTER).encode('string_escape'))
+        s = (MAVEN_HEADER + get_repositories_xml() + MAVEN_FOOTER)
+        print(repr(s)[1:-1].replace("'", "\\'"))
     else:
         print("Nothing to see here - please provide one of the valid command switches.")

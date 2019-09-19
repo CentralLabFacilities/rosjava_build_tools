@@ -12,8 +12,8 @@ import catkin_pkg
 from catkin_pkg.package_templates import create_package_xml, PackageTemplate
 
 # local imports
-import utils
-import console
+from rosjava_build_tools import utils
+from rosjava_build_tools import console
 
 ##############################################################################
 # Methods

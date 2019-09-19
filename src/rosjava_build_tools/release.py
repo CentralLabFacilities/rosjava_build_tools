@@ -6,7 +6,7 @@
 
 import rosdistro
 import catkin_pkg
-from . import catkin
+from rosjava_build_tools import catkin
 
 ##############################################################################
 # Imports

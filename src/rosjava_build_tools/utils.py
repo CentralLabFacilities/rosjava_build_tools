@@ -8,7 +8,7 @@ import os
 import sys
 import errno
 import pwd
-import console
+from rosjava_build_tools import console
 
 ##############################################################################
 # Methods
