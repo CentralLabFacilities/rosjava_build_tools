@@ -236,7 +236,7 @@ def create_rosjava_project():
     author = args.author
     create_rosjava_project_common(args, 'rosjava_project')
     create_talker_listener_classes(project_name, 'rosjava_project', author)
-    add_tasks_to_cmake_setup(['installApp', 'publish'])
+    add_tasks_to_cmake_setup(['installDist', 'publish'])
 
 
 def create_rosjava_library_project():
