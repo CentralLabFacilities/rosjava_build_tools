@@ -19,10 +19,10 @@ def parse_arguments():
     return args
 
 MAVEN_HEADER="""
-	<settings xmlns='http://maven.apache.org/SETTINGS/1.0.0/'
-    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
-    xsi:schemaLocation='http://maven.apache.org/SETTINGS/1.0.0
-    http://maven.apache.org/xsd/settings-1.0.0.xsd'>
+	<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
+    http://maven.apache.org/xsd/settings-1.0.0.xsd">
 		<profiles>
 			<profile>
 				<id>catkin</id>
@@ -144,6 +144,6 @@ if __name__ == '__main__':
         print(home)
     elif args.create_maven_settings:
         s = (MAVEN_HEADER + get_repositories_xml() + MAVEN_FOOTER)
-        print(repr(s)[1:-1].replace("'", "\\'"))
+        print(repr(s)[1:-1])
     else:
         print("Nothing to see here - please provide one of the valid command switches.")
