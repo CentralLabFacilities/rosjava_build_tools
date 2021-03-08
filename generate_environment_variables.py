@@ -10,7 +10,7 @@ def parse_arguments():
     parser = argparse.ArgumentParser(description='Generate environment variables for the rosjava maven environment.')
     cmd_group = parser.add_mutually_exclusive_group()
     cmd_group.add_argument('-d', '--maven-deployment-repository', action='store_true', help='Return the current devel workspace maven directory.')
-    cmd_group.add_argument('-r', '--maven-repository', action='store_true', help='The url to the external ros maven repository.')
+    #cmd_group.add_argument('-r', '--maven-repository', action='store_true', help='The url to the external ros maven repository.')
     cmd_group.add_argument('-m', '--maven-path', action='store_true', help='Generate maven path across all chained workspcaes.')
     cmd_group.add_argument('-g', '--gradle-user-home', action='store_true', help='Generate the local gradle user home in the current devel workspace (share/gradle).')
     cmd_group.add_argument('-l', '--local-maven-repository', action='store_true', help='Generate the local maven cache in the current devel workspace (share/maven).')
