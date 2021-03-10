@@ -119,11 +119,11 @@ if __name__ == '__main__':
             if repo in [os.path.join(w, 'share', 'repository') for w in workspaces]: #TODO: make configurable!
                 repo = os.path.join(workspaces[0], 'share', 'repository') #TODO: make configurable!
         print(repo)
-    elif args.maven_repository:
-        repo = get_environment_variable(environment_variables, 'ROS_MAVEN_REPOSITORY')
-        if repo is None:
-            repo = 'https://mvn.cit-ec.de/nexus/content/repositories/releases/'
-        print(repo)
+    #elif args.maven_repository:
+    #    repo = get_environment_variable(environment_variables, 'ROS_MAVEN_REPOSITORY')
+    #    if repo is None:
+    #        repo = 'https://mvn.cit-ec.de/nexus/content/repositories/releases/'
+    #    print(repo)
     elif args.maven_path:
         print(generate_maven_path())
     elif args.gradle_user_home:
