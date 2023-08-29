@@ -23,6 +23,7 @@ buildscript {
 }
 
 apply plugin: 'catkin'
+apply plugin: 'maven-publish'
 
 
 allprojects {
@@ -57,7 +58,7 @@ subprojects {
 /*
   Some useful tasks:
 
-    install: deploys jar's to MavenLocal() (i.e. ~/.m2/repository)
+    publishToMavenLocal: deploys jar's to MavenLocal() (i.e. ~/.m2/repository)
     publish : deploys jar's to devel/share/maven
     installDist : assembles java apps in the _subproject_/build directories.
 
