@@ -57,11 +57,12 @@ def index_message_package_dependencies_from_local_environment(package_name_list=
             package_path = os.path.normpath(os.path.join(path, package_path))
             all_packages[package.name] = (package_path, package)
             if has_build_depend_on_message_generation(package) or package.name in message_package_whitelist:
-                if package_name_list:
-                    if package.name in package_name_list:
+                if not package.name in message_package_blacklist:
+                    if package_name_list:
+                        if package.name in package_name_list:
+                            message_packages[package.name] = (package_path, package)
+                    else:
                         message_packages[package.name] = (package_path, package)
-                else:
-                    message_packages[package.name] = (package_path, package)
     # put into the correct form for sorting
     # The following returns: A list of tuples containing the relative path and a ``Package`` object,
     sorted_package_tuples = catkin_pkg.topological_order.topological_order_packages(
