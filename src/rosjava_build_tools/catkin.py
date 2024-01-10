@@ -14,7 +14,7 @@ import catkin_pkg.topological_order
 
 # packages that don't properly identify themselves as message packages (fix upstream).
 message_package_whitelist = ['map_store']
-message_package_blacklist = ['navfn', 'move_base', 'pcl_ros', 'current_obstacle_layer', 'nonpersistent_voxel_layer', 'move_base', 'spatio_temporal_voxel_layer', 'nonpersistent_voxel_layer']
+message_package_blacklist = ['move_base', 'pcl_ros', 'current_obstacle_layer', 'nonpersistent_voxel_layer', 'move_base', 'spatio_temporal_voxel_layer', 'nonpersistent_voxel_layer']
 
 ##############################################################################
 # Methods
