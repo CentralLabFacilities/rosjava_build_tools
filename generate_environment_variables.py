@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import os
 import argparse
@@ -81,7 +81,7 @@ def get_workspaces(environ):
     value = environ[env_name] if env_name in environ else ''
     paths = [path for path in value.split(os.pathsep) if path]
     # dont remove non-workspace paths
-    workspaces = [path.replace(' ', '\ ') for path in paths]
+    workspaces = [path.replace(' ', r'\ ') for path in paths]
     return workspaces
 
 def get_environment_variable(environ, key):
